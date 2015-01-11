@@ -5,22 +5,37 @@
 <html lang="en">
 
 <head>
+
 	<meta charset='utf-8'>
 	<title>IAT 381 Lab 1</title>
+
+	<!-- Linking Bootstrap's CSS -->
 	<link rel="stylesheet" href="./dist/css/bootstrap.css">
+
+	<!-- Linking Google's Roboto Font -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
 </head>
+
+<!-- Created own CSS for personal customization by overriding Bootstrap's CSS -->
 
 <style>
 
 html, body {
 	padding: 0;
-	margin: 2em;
+	margin: 3em;
 	font-family: 'Roboto', Helvetica, Arial, "sans-serif";
 }
 
-.tabpanel {
-	border: 1px solid orange;
+h1 {
+	font-size: 2em;
+	margin: 1em 0;
+}
+
+img {
+	width: 100%;
+	max-width: 1100px;
+	height: auto;
 }
 
 .tab-content {
@@ -31,6 +46,7 @@ html, body {
 
 <body>
 
+<!-- Bootstrap theme setup -->
 <!-- 	<div class="container-fluid">
 		<h1>Hello, World!</h1>
 		<div class="row">
@@ -58,24 +74,41 @@ html, body {
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">About Me</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Page 3</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Page 4</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Tab 3</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Tab 4</a></li>
   </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home"><p>"Hello World!"</p></div>
-    <div role="tabpanel" class="tab-pane" id="profile"><p>Hello, I am Janice =)</p></div>
-    <div role="tabpanel" class="tab-pane" id="messages"><p>This is Page 3.</p></div>
-    <div role="tabpanel" class="tab-pane" id="settings"><p>This is Page 4.</p></div>
+    <div role="tabpanel" class="tab-pane active" id="home">
+    	<h1>Hello World!</h1>
+    	<!-- Kitten place holder from http://placekitten.com -->
+    	<img src="http://placekitten.com/1100/450" width="1100" height="450" alt="image"></img>
+    	<!-- <img src="http://placehold.it/1100x450" width="1100" height="450" alt="image"></img> -->
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+    	<h1>Hello, I'm Janice Ng =)</h1>
+    	<p>Currently, I am a 4th year SIAT student at SFU studying user experience design.<p>
+    	<img src="./img/me.png" alt="profile picture"></img>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">
+    	<h1>Some Hiptser Ipsum</h1>
+    	<p>Single-origin coffee cray typewriter YOLO, sustainable Brooklyn Portland Bushwick fixie hoodie hashtag. Keffiyeh disrupt irony American Apparel fingerstache YOLO, messenger bag sriracha. Readymade jean shorts slow-carb, vegan cardigan cornhole cronut. Semiotics occupy cred bitters. Put a bird on it 90's small batch tousled, scenester pickled tilde lumbersexual normcore sriracha. Lo-fi aesthetic pour-over, American Apparel Austin four loko retro. Flannel deep v tote bag trust fund, banjo selvage four dollar toast fanny pack squid.</p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="settings">
+    	<h1>Some More Hiptser Ipsum</h1>
+    	<p>Ugh aesthetic keffiyeh Godard hashtag, XOXO readymade heirloom chambray four loko High Life biodiesel banjo actually. Lo-fi freegan tousled, polaroid small batch crucifix PBR pop-up blog. Listicle mumblecore normcore, +1 mustache messenger bag Helvetica irony Pinterest PBR small batch. Marfa lumbersexual vinyl normcore craft beer occupy. Ethical bespoke distillery irony, tofu viral whatever butcher. IPhone hella +1, chambray Vice fanny pack try-hard paleo literally blog. 3 wolf moon beard direct trade pickled, twee trust fund food truck American Apparel master cleanse.</p>
+    </div>
   </div>
 
 </div>
 
 </body>
 
+<!-- Javascript -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="./dist/js/bootstrap.js"></script>
+
 <script>
 
 	$('#myTab a').click(function (e) {
